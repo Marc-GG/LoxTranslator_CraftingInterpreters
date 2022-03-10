@@ -1,0 +1,49 @@
+﻿  AstPrinter.cpp
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Token.h(77,16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Token.h(77,8): error C2146: syntax error: missing ';' before identifier 'toString'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Token.h(77,29): error C2143: syntax error: missing ';' before '{'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Token.h(77,29): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(23,1): error C2027: use of undefined type 'Visitor'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(3): message : see declaration of 'Visitor'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(35,1): error C2027: use of undefined type 'Visitor'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(3): message : see declaration of 'Visitor'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(47,1): error C2027: use of undefined type 'Visitor'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(3): message : see declaration of 'Visitor'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(62,1): error C2027: use of undefined type 'Visitor'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(3): message : see declaration of 'Visitor'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(20,9): error C2872: 'string': ambiguous symbol
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Token.h(77,1): message : could be 'int string'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring(4564,7): message : or       'std::string'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(20,15): error C3646: 'result': unknown override specifier
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(20,15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(21,9): error C2872: 'string': ambiguous symbol
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Token.h(77,1): message : could be 'int string'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring(4564,7): message : or       'std::string'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(21,21): error C3646: 'parenthesize': unknown override specifier
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(21,21): error C2059: syntax error: '('
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(21,62): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(33,9): error C2872: 'string': ambiguous symbol
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Token.h(77,1): message : could be 'int string'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring(4564,7): message : or       'std::string'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(33,14): error C3646: 'print': unknown override specifier
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(33,14): error C2059: syntax error: '('
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(33,27): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(38,17): error C2614: 'AstPrinter': illegal member initialization: 'result' is not a base or member
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(41,3): error C2065: 'result': undeclared identifier
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(41,12): error C3861: 'parenthesize': identifier not found
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(45,3): error C2065: 'result': undeclared identifier
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(45,12): error C3861: 'parenthesize': identifier not found
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(50,4): error C2065: 'result': undeclared identifier
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(53,4): error C2065: 'result': undeclared identifier
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(53,13): error C3861: 'toString': identifier not found
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(58,3): error C2065: 'result': undeclared identifier
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(58,12): error C3861: 'parenthesize': identifier not found
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(63,23): error C2872: 'string': ambiguous symbol
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Token.h(77,1): message : could be 'int string'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring(4564,7): message : or       'std::string'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(63,10): error C2923: 'std::vector': 'string' is not a valid template type argument for parameter '_Ty'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Token.h(77): message : see declaration of 'string'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(63,10): error C2976: 'std::vector': too few template arguments
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector(413): message : see declaration of 'std::vector'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(63,25): error C2955: 'std::vector': use of class template requires template argument list
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector(413): message : see declaration of 'std::vector'
