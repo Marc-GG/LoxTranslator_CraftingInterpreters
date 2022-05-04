@@ -1,49 +1,33 @@
 ﻿  AstPrinter.cpp
-C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Token.h(77,16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Token.h(77,8): error C2146: syntax error: missing ';' before identifier 'toString'
-C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Token.h(77,29): error C2143: syntax error: missing ';' before '{'
-C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Token.h(77,29): error C2447: '{': missing function header (old-style formal list?)
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(23,1): error C2027: use of undefined type 'Visitor'
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(3): message : see declaration of 'Visitor'
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(35,1): error C2027: use of undefined type 'Visitor'
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(3): message : see declaration of 'Visitor'
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(47,1): error C2027: use of undefined type 'Visitor'
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(3): message : see declaration of 'Visitor'
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(62,1): error C2027: use of undefined type 'Visitor'
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(3): message : see declaration of 'Visitor'
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(20,9): error C2872: 'string': ambiguous symbol
-C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Token.h(77,1): message : could be 'int string'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring(4564,7): message : or       'std::string'
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(20,15): error C3646: 'result': unknown override specifier
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(20,15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(21,9): error C2872: 'string': ambiguous symbol
-C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Token.h(77,1): message : could be 'int string'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring(4564,7): message : or       'std::string'
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(21,21): error C3646: 'parenthesize': unknown override specifier
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(21,21): error C2059: syntax error: '('
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(21,62): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(33,9): error C2872: 'string': ambiguous symbol
-C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Token.h(77,1): message : could be 'int string'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring(4564,7): message : or       'std::string'
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(33,14): error C3646: 'print': unknown override specifier
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(33,14): error C2059: syntax error: '('
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(33,27): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(38,17): error C2614: 'AstPrinter': illegal member initialization: 'result' is not a base or member
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(41,3): error C2065: 'result': undeclared identifier
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(41,12): error C3861: 'parenthesize': identifier not found
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(45,3): error C2065: 'result': undeclared identifier
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(45,12): error C3861: 'parenthesize': identifier not found
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(50,4): error C2065: 'result': undeclared identifier
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(53,4): error C2065: 'result': undeclared identifier
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(53,13): error C3861: 'toString': identifier not found
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(58,3): error C2065: 'result': undeclared identifier
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(58,12): error C3861: 'parenthesize': identifier not found
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(63,23): error C2872: 'string': ambiguous symbol
-C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Token.h(77,1): message : could be 'int string'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring(4564,7): message : or       'std::string'
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(63,10): error C2923: 'std::vector': 'string' is not a valid template type argument for parameter '_Ty'
-C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Token.h(77): message : see declaration of 'string'
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(63,10): error C2976: 'std::vector': too few template arguments
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector(413): message : see declaration of 'std::vector'
-C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(63,25): error C2955: 'std::vector': use of class template requires template argument list
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector(413): message : see declaration of 'std::vector'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(10,15): error C2011: 'Visitor': 'class' type redefinition
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(10): message : see declaration of 'Visitor'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(18,12): error C2011: 'Expr': 'class' type redefinition
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(18): message : see declaration of 'Expr'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(24,17): error C2011: 'Binary': 'struct' type redefinition
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(4): message : see declaration of 'Binary'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(42,19): error C2011: 'Grouping': 'struct' type redefinition
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(5): message : see declaration of 'Grouping'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(54,18): error C2011: 'Literal': 'struct' type redefinition
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(7): message : see declaration of 'Literal'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(66,16): error C2011: 'Unary': 'struct' type redefinition
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(6): message : see declaration of 'Unary'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.h(12,35): error C2504: 'Visitor': base class undefined
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.h(14,35): error C2061: syntax error: identifier 'vector'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.h(21,15): error C3668: 'AstPrinter::visitBinaryExpr': method with override specifier 'override' did not override any base class methods
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.h(23,15): error C3668: 'AstPrinter::visitGroupingExpr': method with override specifier 'override' did not override any base class methods
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.h(25,15): error C3668: 'AstPrinter::visitLiteralExpr': method with override specifier 'override' did not override any base class methods
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.h(27,15): error C3668: 'AstPrinter::visitUnaryExpr': method with override specifier 'override' did not override any base class methods
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(16,18): error C2011: 'AstPrinter': 'class' type redefinition
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.h(12): message : see declaration of 'AstPrinter'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(63,36): error C2027: use of undefined type 'Literal'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(7): message : see declaration of 'Literal'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(63,37): error C2027: use of undefined type 'Unary'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(6): message : see declaration of 'Unary'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(68,3): error C2027: use of undefined type 'Literal'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(7): message : see declaration of 'Literal'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(69,2): error C2027: use of undefined type 'Grouping'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(5): message : see declaration of 'Grouping'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(69,3): error C2027: use of undefined type 'Binary'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\Expr.h(4): message : see declaration of 'Binary'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.cpp(71,27): error C2027: use of undefined type 'AstPrinter'
+C:\Users\marcz\source\repos\CraftingInterpreters\AstPrinter\AstPrinter.h(12): message : see declaration of 'AstPrinter'

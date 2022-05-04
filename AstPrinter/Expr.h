@@ -1,7 +1,22 @@
 #include "variant"
 #include "../Lox/Token.h"
-class Visitor;
+
+struct Binary;
+struct Grouping;
+struct Unary;
+struct Literal;
+
+
+class Visitor {
+public:
+    virtual void visitBinaryExpr(const Binary* Expr) = 0;
+    virtual void visitGroupingExpr(const Grouping* Expr) = 0;
+    virtual void visitLiteralExpr(const Literal* Expr) = 0;
+    virtual void visitUnaryExpr(const Unary* Expr) = 0;
+};
+
 class Expr {
+
 public: 
   virtual void accept(Visitor* visitor) const = 0;
 
@@ -61,12 +76,4 @@ public:
     virtual void accept(Visitor* visitor) const override {
       return visitor->visitUnaryExpr(this);
     }
-  };
-
-  class Visitor {
-    public: 
-    virtual void visitBinaryExpr(const Binary* Expr) = 0;
-    virtual void visitGroupingExpr(const Grouping* Expr) = 0;
-    virtual void visitLiteralExpr(const Literal* Expr) = 0;
-    virtual void visitUnaryExpr(const Unary* Expr) = 0;
   };

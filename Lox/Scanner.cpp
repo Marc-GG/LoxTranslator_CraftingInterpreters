@@ -6,151 +6,29 @@
 #include <vector>
 #include <map>
 #include <sstream>
-#include <map>
-#include <unordered_map>
-#include <variant>
+#include "Token.h"
+#include "Lox.h"
 
-
-static void error(int line, std::string message);
-static void report(int line, std::string where, std::string message);
-class Lox {
-
-public:
-	static bool hadError;
-};
-bool Lox::hadError = false;
 using namespace std;
-using std::cout;
-using std::endl;
-
-
-enum class TokenType {
-
-	// Single-character tokens.
-	LEFT_PAREN, RIGHT_PAREN, LEFT_BRACE, RIGHT_BRACE,
-	COMMA, DOT, MINUS, PLUS, SEMICOLON, SLASH, STAR,
-
-	// One or two character tokens.
-	BANG, BANG_EQUAL,
-	EQUAL, EQUAL_EQUAL,
-	GREATER, GREATER_EQUAL,
-	LESS, LESS_EQUAL,
-
-	// Literals.
-	IDENTIFIER, STRING, NUMBER,
-
-	// Keywords.
-	AND, CLASS, ELSE, FALSE, FUN, FOR, IF, NIL, OR,
-	PRINT, RETURN, SUPER, THIS, TRUE, VAR, WHILE,
-
-	EOFF
-};
-
-string enumString(TokenType token) { //transforms enum characters into string
-	std::map<TokenType, string> enum_map = {
-		{TokenType::LEFT_PAREN, "LEFT_PAREN"},
-		{TokenType::RIGHT_PAREN,"RIGHT_PAREN"},
-		{TokenType::LEFT_BRACE,"LEFT_BRACE"},
-		{TokenType::RIGHT_BRACE,"RIGHT_BRACE"},
-		{TokenType::COMMA,"COMMA"},
-		{TokenType::DOT,"DOT"},
-		{TokenType::MINUS,"MINUS"},
-		{TokenType::PLUS,"PLUS"},
-		{TokenType::SEMICOLON,"SEMICOLON"},
-		{TokenType::SLASH,"SLASH"},
-		{TokenType::STAR,"STAR"},
-		{TokenType::BANG,"BANG"},
-		{TokenType::BANG_EQUAL,"BANG_EQUAL"},
-		{TokenType::EQUAL,"EQUAL"},
-		{TokenType::EQUAL_EQUAL,"EQUAL"},
-		{TokenType::GREATER,"GREATER"},
-		{TokenType::GREATER_EQUAL,"GREATER_EQUAL"},
-		{TokenType::LESS,"LESS"},
-		{TokenType::LESS_EQUAL,"LESS_EQUAL"},
-		{TokenType::IDENTIFIER,"IDENTIFIER"},
-		{TokenType::STRING,"STRING"},
-		{TokenType::NUMBER,"NUMBER"},
-		{TokenType::AND,"AND"},
-		{TokenType::CLASS,"CLASS"},
-		{TokenType::ELSE,"ELSE"},
-		{TokenType::FALSE,"FALSE"},
-		{TokenType::FUN,"FUN"},
-		{TokenType::FOR,"FOR"},
-		{TokenType::IF,"IF"},
-		{TokenType::NIL,"NIL"},
-		{TokenType::OR,"OR"},
-		{TokenType::PRINT,"PRINT"},
-		{TokenType::RETURN,"RETURN"},
-		{TokenType::SUPER,"SUPER"},
-		{TokenType::THIS,"THIS"},
-		{TokenType::TRUE,"TRUE"},
-		{TokenType::VAR,"VAR"},
-		{TokenType::WHILE,"WHILE"},
-		{TokenType::EOFF,"EOFF"},
-	};
-
-	return enum_map[token];
-}
-
-using LoxValue = std::variant<std::monostate, double, bool, string>;
-
-class Token {
-
-	
-	TokenType type;
-	string lexeme;
-	LoxValue literal;
-	int line;
-
-public:
-	Token(TokenType type, string lexeme, LoxValue literal, int line) {
-
-		this->type = type;
-		this->lexeme = lexeme;
-		this->literal = literal;
-		this->line = line;
-	}
-
-	string toString() {
-		string beginningstring = enumString(type) + " " + lexeme + " ";
-
-		if (holds_alternative<string>(literal)) {
-
-			return  beginningstring + std::get<string>(literal);
-
-		}
-		else if (holds_alternative<double>(literal)) {
-			return beginningstring + std::to_string(std::get<double>(literal));
-
-		}
-		else if (holds_alternative<bool>(literal)) {
-
-
-
-			if (std::get<bool>(literal) == true) {
-
-				return beginningstring + "true";
-
-			}
-
-			else
-
-				return beginningstring + "false";
-
-
-
-		}
-		//Must be NILL
-		else
-			return beginningstring;
-		
-			
-	}
-
-};
-
 class Scanner { 
 	public:
+		std::unordered_map<string, TokenType> keywords{
+			   {"and", TokenType::AND},
+			   {"class", TokenType::CLASS},
+			   {"else", TokenType::ELSE},
+			   {"false", TokenType::FALSE},
+			   {"for", TokenType::FOR},
+			   {"fun", TokenType::FUN},
+			   {"if", TokenType::IF},
+			   {"nil", TokenType::NIL},
+			   {"or", TokenType::OR},
+			   {"print", TokenType::PRINT},
+			   {"return", TokenType::RETURN},
+			   {"super", TokenType::SUPER},
+			   {"this", TokenType::THIS},
+			   {"true", TokenType::TRUE},
+			   {"var", TokenType::VAR},
+			   {"while", TokenType::WHILE} };
 		string source;
 		std::vector<Token> tokens;
 
@@ -194,8 +72,6 @@ class Scanner {
 
 		}
 
-			
-	
 		//uhhhhh check the string its supposed to be object type, but i set object to string, so string should be fine.
 		void addToken(TokenType type, LoxValue literal = LoxValue{}) {
 	
@@ -382,125 +258,7 @@ class Scanner {
 
 
 
-		std::unordered_map<string, TokenType> keywords  {
-			{"and", TokenType::AND}, 
-			{"class", TokenType::CLASS},
-			{"else", TokenType::ELSE},
-			{"false", TokenType::FALSE},
-			{"for", TokenType::FOR},
-			{"fun", TokenType::FUN},
-			{"if", TokenType::IF},
-			{"nil", TokenType::NIL},
-			{"or", TokenType::OR},
-			{"print", TokenType::PRINT},
-			{"return", TokenType::RETURN},
-			{"super", TokenType::SUPER},
-			{"this", TokenType::THIS},
-			{"true", TokenType::TRUE},
-			{"var", TokenType::VAR},
-			{"while", TokenType::WHILE}
-
-		};
-
-		
 		
 };
 
-
-
-
-
-void run(string source) { // must contain Scanner and Token classes
-
-	Scanner	scanner =  Scanner(source);
-	vector<Token> tokens = scanner.scanTokens();
-
-	for (Token token : tokens) {
-		
-		cout << token.toString() <<endl; //operator overload created in Token class - *** Clarify this works ***
-	}
-
-}
-
-////////////////////////////////////////////Error Handeling
-
-static void report(int line, string where, string message) { //what is had error?
-
-	stringstream ss; //converting line int into string
-
-	string lineconv;
-
-	ss << line;
-	ss >> lineconv;
-
-	cout << ("[line " + lineconv + "] Error" + where + ": " + message);
-
-	Lox::hadError = true;
-}
-
-
-static void error(int line, string message) {
-
-	report(line, "", message);
-
-}
-
-
-void runFile(string filename) {
-	ifstream input_file(filename);
-	if (!input_file.is_open()) {
-		cerr << "Could not open the file - '" << filename << "'" << "\n";
-		exit(EXIT_FAILURE);
-	}
-	run(string((std::istreambuf_iterator<char>(input_file)), std::istreambuf_iterator<char>())); // https://www.delftstack.com/howto/cpp/read-file-into-string-cpp/#:~:text=Use%20rdbuf%20to%20Read%20File%20Into%20String%20in,using%20the%20%3C%3C%20operator%20to%20the%20needed%20object.
-
-	if (Lox::hadError) 
-		return exit(65);
-}
-
-void runPrompt() { // must contain Scanner class before moving on.
-
-	while (true) {
-
-		std::cout << "> ";
-
-		string line;
-		getline(cin, line);
-
-		if (line.empty()) {
-			break;
-		}
-		run(line);
-		Lox::hadError = false;
-
-	}
-}
-
-
-
-int main(int argc, char** argv) {
-	
-
-	string x = "Usage: jlox [script]";
-
-	if (argc > 2) {
-		cout << x;
-		cout << endl;
-		return EXIT_SUCCESS;
-
-	}
-	else if (argc == 2) {
-		runFile(argv[1]);
-		return 0;
-
-	}
-	else {
-		runPrompt();
-		return 0;
-	}
-
-	
-}
-	
-	
 

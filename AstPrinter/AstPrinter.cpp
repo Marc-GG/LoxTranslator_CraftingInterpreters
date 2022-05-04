@@ -8,18 +8,15 @@
 #include <map>
 #include <variant>
 #include <filesystem>
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
-#include <cstring>
-#include <algorithm>
 #include "Expr.h"
+#include "AstPrinter.h"
+
 using namespace std;
 
 class AstPrinter : public Visitor {
 	string result;
 	string parenthesize(string name, vector<const Expr*> exprs) {  //Expr... exprs Define the second parameter
-		string builder = name + "(";
+		string builder = "(" + name;
 		for (auto expr : exprs) {
 			builder += " ";
 			expr->accept(this);
@@ -37,40 +34,39 @@ public:
 
 	AstPrinter() : result{""} {}
 
-	void visitBinaryExpr(Binary* expr) {
+	virtual void visitBinaryExpr(const Binary* expr) override {
 		result = parenthesize(expr->oper->lexeme, { expr->left , expr->right });
 	}
 
-	void visitGroupingExpr(Grouping* expr) {
+	virtual void visitGroupingExpr(const Grouping* expr) override{
 		result = parenthesize("group", {expr->expression });
 	}
 
-	void visitLiteralExpr(Literal* expr) {
+	virtual void visitLiteralExpr(const Literal* expr) override {
 		if (expr->value == nullptr) {
 			result = "nil";
 		}
 		else {
-			result = toString(expr->value);
+			result = toString(*expr->value); // DONT FORGET TO DEREFERENCE LOX VALUE TO AVOID BOOL
 		}
 	}
 
-	void visitUnaryExpr(Unary* expr) {
+	virtual void visitUnaryExpr(const Unary* expr) override {
 		result = parenthesize(expr->oper->lexeme, { expr->right });
 	}
 
 };
-
 int main(vector<string> args) {
 	Expr* expression = new Binary(
 		new Unary(
 			new Token(TokenType::MINUS, "-", monostate(), 1),
 			new Literal(new LoxValue(123.0))),
-		new Token(TokenType::STAR, "*", monostate(), 1),
+			new Token(TokenType::STAR, "*", monostate(), 1),
 		new Grouping(
 			new Literal(new LoxValue(45.67)
 			)
-
-
 		)
 	);
+
+	cout << (new AstPrinter())->print(expression) << endl;
 }

@@ -140,11 +140,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AstPrinter.cpp" />
+    <ClInclude Include="..\Lox\Token.h" />
+    <ClInclude Include="AstPrinter.h" />
+    <ClInclude Include="Expr.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Lox\Token.h" />
-    <ClInclude Include="Expr.h" />
+    <ClCompile Include="AstPrinter.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

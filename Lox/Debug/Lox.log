@@ -1,0 +1,6 @@
+﻿  Interpreter.cpp
+  Lox.cpp
+  Parser.cpp
+  Scanner.cpp
+  Generating Code...
+  Lox.vcxproj -> C:\Users\marcz\source\repos\CraftingInterpreters\Debug\Lox.exe
