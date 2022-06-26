@@ -20,6 +20,8 @@ std::string enumString(TokenType token) { //transforms enum characters into stri
 		{TokenType::SEMICOLON,"SEMICOLON"},
 		{TokenType::SLASH,"SLASH"},
 		{TokenType::STAR,"STAR"},
+		{TokenType::QUESTION,"QUESTION"},
+		{TokenType::COLON, "COLON"},
 		{TokenType::BANG,"BANG"},
 		{TokenType::BANG_EQUAL,"BANG_EQUAL"},
 		{TokenType::EQUAL,"EQUAL"},

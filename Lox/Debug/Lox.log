@@ -1,6 +1,51 @@
-﻿  Interpreter.cpp
+﻿  Environment.cpp
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Stmt.h(27,11): error C7568: argument list missing after assumed function template 'vector'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Stmt.h(27,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Stmt.h(27): error C2062: type 'unknown-type' unexpected
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Stmt.h(27,35): error C2238: unexpected token(s) preceding ';'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Stmt.h(29,11): error C7568: argument list missing after assumed function template 'vector'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Stmt.h(30,8): error C2614: 'Block': illegal member initialization: 'statements' is not a base or member
+  Interpreter.cpp
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Stmt.h(27,11): error C7568: argument list missing after assumed function template 'vector'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Stmt.h(27,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Stmt.h(27): error C2062: type 'unknown-type' unexpected
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Stmt.h(27,35): error C2238: unexpected token(s) preceding ';'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Stmt.h(29,11): error C7568: argument list missing after assumed function template 'vector'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Stmt.h(30,8): error C2614: 'Block': illegal member initialization: 'statements' is not a base or member
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Interpreter.h(17,14): error C3646: 'environment': unknown override specifier
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Interpreter.h(17,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Interpreter.h(41,46): error C2061: syntax error: identifier 'Environment'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Interpreter.cpp(47,83): error C2511: 'void Interpreter::executeBlock(std::vector<Stmt *,std::allocator<Stmt *>>,Environment)': overloaded member function not found in 'Interpreter'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Interpreter.h(13): message : see declaration of 'Interpreter'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Interpreter.cpp(48,25): error C2671: 'Interpreter::executeBlock': static member functions do not have 'this' pointers
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Interpreter.cpp(51,3): error C2671: 'Interpreter::executeBlock': static member functions do not have 'this' pointers
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Interpreter.cpp(54,4): error C2352: 'Interpreter::execute': illegal call of non-static member function
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Interpreter.cpp(43): message : see declaration of 'Interpreter::execute'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Interpreter.cpp(57,4): error C2671: 'Interpreter::executeBlock': static member functions do not have 'this' pointers
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Interpreter.cpp(61,2): error C2671: 'Interpreter::executeBlock': static member functions do not have 'this' pointers
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Interpreter.cpp(66,21): error C2039: 'statements': is not a member of 'Block'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Stmt.h(26): message : see declaration of 'Block'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Interpreter.cpp(66,49): error C2065: 'environment': undeclared identifier
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Interpreter.cpp(86,2): error C2065: 'environment': undeclared identifier
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Interpreter.cpp(109,2): error C2065: 'environment': undeclared identifier
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Interpreter.cpp(146,11): error C2065: 'environment': undeclared identifier
   Lox.cpp
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Interpreter.h(17,14): error C3646: 'environment': unknown override specifier
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Interpreter.h(17,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Interpreter.h(41,46): error C2061: syntax error: identifier 'Environment'
   Parser.cpp
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Stmt.h(27,11): error C7568: argument list missing after assumed function template 'vector'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Stmt.h(27,25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Stmt.h(27): error C2062: type 'unknown-type' unexpected
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Stmt.h(27,35): error C2238: unexpected token(s) preceding ';'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Stmt.h(29,11): error C7568: argument list missing after assumed function template 'vector'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Stmt.h(30,8): error C2614: 'Block': illegal member initialization: 'statements' is not a base or member
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Parser.cpp(99,68): error C2664: 'Block::Block(unknown-type)': cannot convert argument 1 from 'std::vector<Stmt *,std::allocator<Stmt *>>' to 'unknown-type'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Stmt.h(29,5): message : see declaration of 'Block::Block'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Parser.cpp(105,54): error C2664: 'Block::Block(unknown-type)': cannot convert argument 1 from 'std::vector<Stmt *,std::allocator<Stmt *>>' to 'unknown-type'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Stmt.h(29,5): message : see declaration of 'Block::Block'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Parser.cpp(163,66): error C2664: 'Block::Block(unknown-type)': cannot convert argument 1 from 'std::vector<Stmt *,std::allocator<Stmt *>>' to 'unknown-type'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Stmt.h(29,5): message : see declaration of 'Block::Block'
+C:\Users\marcz\source\repos\CraftingInterpreters\Lox\Parser.cpp(163): warning C4390: ';': empty controlled statement found; is this the intent?
   Scanner.cpp
   Generating Code...
-  Lox.vcxproj -> C:\Users\marcz\source\repos\CraftingInterpreters\Debug\Lox.exe

@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AstPrinter", "AstPrinter\AstPrinter.vcxproj", "{07E4A70F-06F9-4E32-AEFC-24FC0603BA5C}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Generator", "Generator\Generator.vcxproj", "{04422FED-2E64-4810-BA45-3A55C873BBC3}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lox", "Lox\Lox.vcxproj", "{22A7775E-E7D1-4AB3-AC54-29CB68D985DA}"
@@ -17,14 +15,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{07E4A70F-06F9-4E32-AEFC-24FC0603BA5C}.Debug|x64.ActiveCfg = Debug|x64
-		{07E4A70F-06F9-4E32-AEFC-24FC0603BA5C}.Debug|x64.Build.0 = Debug|x64
-		{07E4A70F-06F9-4E32-AEFC-24FC0603BA5C}.Debug|x86.ActiveCfg = Debug|Win32
-		{07E4A70F-06F9-4E32-AEFC-24FC0603BA5C}.Debug|x86.Build.0 = Debug|Win32
-		{07E4A70F-06F9-4E32-AEFC-24FC0603BA5C}.Release|x64.ActiveCfg = Release|x64
-		{07E4A70F-06F9-4E32-AEFC-24FC0603BA5C}.Release|x64.Build.0 = Release|x64
-		{07E4A70F-06F9-4E32-AEFC-24FC0603BA5C}.Release|x86.ActiveCfg = Release|Win32
-		{07E4A70F-06F9-4E32-AEFC-24FC0603BA5C}.Release|x86.Build.0 = Release|Win32
 		{04422FED-2E64-4810-BA45-3A55C873BBC3}.Debug|x64.ActiveCfg = Debug|x64
 		{04422FED-2E64-4810-BA45-3A55C873BBC3}.Debug|x64.Build.0 = Debug|x64
 		{04422FED-2E64-4810-BA45-3A55C873BBC3}.Debug|x86.ActiveCfg = Debug|Win32

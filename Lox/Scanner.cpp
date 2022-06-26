@@ -161,9 +161,7 @@ class Scanner {
 			auto type = keywords.find(text);
 			if (type == keywords.end())
 				addToken(TokenType::IDENTIFIER);
-
 			else
-
 				addToken(type -> second);
 		}
 		
@@ -185,6 +183,8 @@ class Scanner {
 			case '+': addToken(TokenType::PLUS); break;
 			case ';': addToken(TokenType::SEMICOLON); break;
 			case '*': addToken(TokenType::STAR); break;
+			//case '?': addToken(TokenType::QUESTION); break;
+			//case ':': addToken(TokenType::COLON); break;
 
 			case '!':
 				addToken(match('=') ? TokenType::BANG_EQUAL : TokenType::BANG);

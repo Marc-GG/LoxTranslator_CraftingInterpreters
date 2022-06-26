@@ -140,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Environment.cpp" />
     <ClCompile Include="Interpreter.cpp" />
     <ClCompile Include="Lox.cpp" />
     <ClCompile Include="Parser.cpp" />
@@ -147,11 +148,13 @@
     <ClCompile Include="Token.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Environment.h" />
     <ClInclude Include="Expr.h" />
     <ClInclude Include="Interpreter.h" />
     <ClInclude Include="Lox.h" />
     <ClInclude Include="Parser.h" />
     <ClInclude Include="RuntimeError.h" />
+    <ClInclude Include="Stmt.h" />
     <ClInclude Include="Token.h" />
   </ItemGroup>
   <ItemGroup>

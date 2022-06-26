@@ -1,4 +1,4 @@
-//Expr
+//Expr and Stmt generator
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -78,6 +78,7 @@ static void defineAst(string outputDir, string baseName, map<string, vector<stri
 	ofstream writer(path); 
 	writer <<"#pragma once"<< endl;
 	writer << "#include \"Token.h\"" << endl; //DONT FORGET TO PUT THIS BACK TO "TOKEN.H" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+	writer << "#include \"Expr.h\"" << endl; //Use this for Stmt.h otherwise comment it out
 	for (auto type : types) {
 		writer << "struct " << type.first << ";"<< endl;
 	}
@@ -104,12 +105,28 @@ int main(int argc, char** argv) {
 		cout << "Usage: generate_ast <output directory>" << endl;	
 	}
 	string outputDir = argv[1];
-	map<string, vector<string>> types{
+
+	//Expr
+	
+	/*map<string, vector<string>> types{
+		{"Assign", {"Token", "name", "Expr*", "value"}},
 		{"Binary"  , {"Expr*" ,"left", "Token", "oper", "Expr*", "right"} },
 		{"Grouping", {"Expr*", "expression"}},
 		{"Literal", {"LoxValue", "value"}},
-		{"Unary", {"Token", "oper","Expr*", "right"}}
+		{"Logical", {"Expr*", "left", "Token", "oper", "Expr*", "right"}},
+		{"Unary", {"Token", "oper","Expr*", "right"}},
+		{"Variable", {"Token", "name"}}
+	};*/
+	//Stmt
+	
+	map<string, vector<string>> types{
+		{"Block", {"vector<Stmt*>", "statements"}},
+		{"Expression"  , {"Expr*" ,"expression"} },
+		{"If", {"Expr*", "condition", "Stmt*", "thenBranch","Stmt*", "elseBranch"}},
+		{"Print", {"Expr*", "expression"}},
+		{"Var", {"Token","name", "Expr*","initializer"}},
+		{"While", {"Expr*", "condition", "Stmt*", "body"}}
 	};
-
-	defineAst(outputDir, "Expr", types);
+	
+	defineAst(outputDir, "Stmt", types); //change between Expr and Stmt when generating files
 }

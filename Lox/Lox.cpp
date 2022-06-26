@@ -6,6 +6,7 @@
 #include "Scanner.cpp"
 #include "Token.h"
 #include "Expr.h"
+#include "Stmt.h"
 #include "Parser.h"
 #include "Lox.h"
 #include "Interpreter.h"
@@ -27,10 +28,13 @@ void run(string source) { // must contain Scanner and Token classes
 	vector<Token> tokens = scanner.scanTokens(); 
 	
 	Parser parser = Parser(tokens);
-	Expr* expression = parser.parse();
+	//Expr* expression = parser.parse();
+	vector<Stmt*> statements = parser.parse(); //Stmt needs a pointer? ------
 
 	if (hadError) return;
-	interpreter.interpret(expression);
+		//interpreter.interpret(expression); //expr
+		interpreter.interpret(statements);
+
 	cout << toString(interpreter.getResult()) << endl;
 }
 void error(Token token, string message) {
@@ -99,6 +103,7 @@ void runPrompt() {
 
 
 int main(int argc, char** argv) {
+	
 	string x = "Usage: jlox [script]";
 	if (argc > 2) {
 		cout << x;
